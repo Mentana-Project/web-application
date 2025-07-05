@@ -1,0 +1,111 @@
+.register-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.register-left {
+  flex: 1;
+}
+
+.register-left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.register-right img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: #A8E6CF !important;
+  color: #2C3E50 !important;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.register-alternatives {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.register-alternatives img {
+  width: 20px;
+  height: 20px;
+}
+
+.register-alternatives button {
+  flex: 1;
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.80rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.register-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-footer a {
+  color: #5C6BC0;
+  text-decoration: none;
+  font-weight: 500;
+}
+.register-footer a:hover {
+  text-decoration: underline;
+}

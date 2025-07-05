@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="login-container">
+  <div class="login-left">
+    <h2>Cuida tu salud emocional, empieza<br /><em>hoy mismo</em></h2>
+    <div class="testimonio">
+      <img src="assets/images/testimonio 2.jpg" alt="Foto testimonio" />
+      <h4>María Lau</h4>
+      <small>04 de abril del 2025</small>
+      <p>
+        Gracias a esta plataforma encontré una terapeuta que realmente me entiende. Me siento más tranquila y acompañada en este proceso. Agendar fue súper fácil y seguro.
+      </p>
+    </div>
+  </div>
+
+  <div class="login-right">
+    <h2>Iniciar sesión</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput formControlName="email" placeholder="Ingresa tu correo" />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">El correo es obligatorio</mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Correo inválido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Ingresa tu contraseña" />
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Contraseña requerida</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="full-width" type="submit">Iniciar sesión</button>
+    </form>
+
+    <div class="login-alternatives">
+      <button mat-stroked-button>
+        <img src="assets/images/google.png" alt="Google" /> Inicia sesión con Google
+      </button>
+      <button mat-stroked-button>
+        <img src="assets/images/microsoft.png" alt="Microsoft" /> Inicia sesión con Microsoft
+      </button>
+    </div>
+    <div class="login-footer">
+        <p>¿No tienes una cuenta? <a routerLink="/register">Regístrate</a></p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

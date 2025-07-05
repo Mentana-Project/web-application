@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<div class="register-wrapper">
+  <div class="register-container">
+    <div class="register-left">
+      <h2 class="register-title">
+        Únete a Mentana y empieza tu camino <br />
+        hacia el bienestar emocional
+      </h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name" placeholder="Ingresa tu nombre" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="lastname" placeholder="Ingresa tu apellido" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput formControlName="email" placeholder="Ingresa tu correo electrónico" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Ingresa tu contraseña" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width" type="submit">Crear cuenta</button>
+      </form>
+
+      <div class="register-alternatives">
+        <button mat-stroked-button>
+          <img src="assets/images/google.png" alt="Google" /> Crear cuenta con Google
+        </button>
+        <button mat-stroked-button>
+          <img src="assets/images/microsoft.png" alt="Microsoft" /> Crear cuenta con Microsoft
+        </button>
+      </div>
+
+      <div class="register-footer">
+        <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
+      </div>
+    </div>
+
+    <div class="register-right">
+      <img src="assets/images/mentana.png" alt="Mentana Registro" />
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
